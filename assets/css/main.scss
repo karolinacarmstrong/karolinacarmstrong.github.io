@@ -42,92 +42,65 @@
     "vendor/font-awesome/brands"
 ;
 /* ==========================================================================
-   ESTILOS PERSONALIZADOS - versão com barra superior e inferior roxas
+   Ajustes finais: barra superior e rodapé roxos, alinhados à sidebar
    ========================================================================== */
 
-/* Fundo geral branco e texto preto */
-body {
-  background: white !important;
-  color: black !important;
-}
-
-/* Remove sombras e caixas de fundo */
-#main, .page__inner-wrap {
-  background: transparent !important;
-  box-shadow: none !important;
-  color: black !important;
-}
-
-/* SIDEBAR — mais larga, roxa, fixada à esquerda */
+/* Sidebar */
 .sidebar {
   background: #9F468F !important;
   color: white !important;
-  height: 100vh;
   position: fixed;
-  left: 0;
   top: 0;
-  width: 330px; /* aumentada */
+  left: 0;
+  height: 100vh;
+  width: 340px;
   padding: 5em 1.5em 2em 1.5em;
   overflow-y: auto;
 }
-.sidebar a,
-.sidebar .author__name,
-.sidebar .author__bio {
-  color: white !important;
-}
 
-/* BARRA SUPERIOR — mantém os botões originais e fica roxa */
+/* Barra superior (masthead + menu) */
 .masthead {
-  background: #9F468F !important;
-  border: none !important;
-  width: calc(100% - 330px);
-  margin-left: 330px;
+  background-color: #9F468F !important;
   color: white !important;
+  position: fixed;
+  top: 0;
+  left: 340px; /* colada à sidebar */
+  width: calc(100% - 340px);
+  z-index: 1000;
+  border: none !important;
 }
-.masthead__inner-wrap {
-  background: #9F468F !important;
+.masthead__inner-wrap,
+.greedy-nav {
+  background-color: #9F468F !important;
 }
+.greedy-nav a,
 .masthead__menu-item a {
   color: white !important;
-  border-radius: 5px;
 }
+.greedy-nav a:hover,
 .masthead__menu-item a:hover {
-  background-color: white !important;
+  background: white !important;
   color: #9F468F !important;
 }
 
-/* Ajuste de margem do conteúdo */
+/* Corrige posição do conteúdo principal */
 #main, .page {
-  margin-left: 350px;
+  margin-left: 360px;
+  margin-top: 100px; /* empurra conteúdo pra baixo da barra superior */
   padding-right: 2em;
   max-width: 950px;
 }
 
-/* LINKS das publicações */
-.archive__item-title a {
-  color: #9F468F !important;
-}
-
-/* Botões (ex: Download Paper) */
-.archive__item .btn, .archive__item .btn--inverse {
-  background: #9F468F !important;
-  color: white !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-.archive__item .btn:hover, .archive__item .btn--inverse:hover {
-  background: #7c3870 !important;
-}
-
-/* RODAPÉ — igual à barra superior */
+/* Rodapé roxo, colado à sidebar */
 .page__footer {
-  background: #9F468F !important;
+  background-color: #9F468F !important;
   color: white !important;
-  margin-left: 330px;
+  margin-left: 340px;
+  border-top: none !important;
   padding: 1.5em 2em;
+  text-align: center;
 }
 .page__footer a {
   color: white !important;
   text-decoration: underline;
 }
-
