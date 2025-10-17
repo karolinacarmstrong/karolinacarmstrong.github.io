@@ -57,7 +57,7 @@ body {
 }
 // Garante que o texto do menu na barra superior é branco
 .masthead__menu-item a {
-  color: white;
+  color: #9F468F;
 }
 // Adiciona o efeito de hover que você pediu
 .masthead__menu-item a:hover {
@@ -77,7 +77,7 @@ body {
 
 // 4. Área de conteúdo principal (#main) com fundo cinza escuro
 #main {
-  background-color: transparent;
+  background-color: none;
   color: white; // Texto principal fica branco
   padding: 2em;
   border-radius: 10px;
