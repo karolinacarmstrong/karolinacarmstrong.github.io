@@ -42,16 +42,16 @@
     "vendor/font-awesome/brands"
 ;
 /* ==========================================================================
-   ESTILOS PERSONALIZADOS FINAIS - VERSÃO DEFINITIVA
+   ESTILOS PERSONALIZADOS FINAIS - VERSÃO DEFINITIVA (CORRIGIDO)
    ========================================================================== */
 
-/* 1. Fundo branco para a área de conteúdo e texto preto */
+/* 1. Fundo branco geral e texto preto */
 body {
   background: white !important;
   color: black;
 }
 
-/* 2. Remove completamente a caixa cinza e a sombra */
+/* 2. Remove caixas e sombras do conteúdo */
 #main, .page__inner-wrap {
   background: transparent !important;
   box-shadow: none !important;
@@ -59,16 +59,16 @@ body {
   padding-top: 2em;
 }
 
-/* 3. Barra lateral roxa, com altura total, encostada à esquerda e com largura definida */
+/* 3. SIDEBAR — agora mais larga */
 .sidebar {
   background: #9F468F !important;
   color: white;
-  height: 100vh; // Altura total da janela
-  position: fixed; // Fixa na lateral
-  left: 0; // ENCOSTA A BARRA À MARGEM ESQUERDA
-  top: 0; // Garante que começa no topo
-  width: 250px; // DEFINE UMA LARGURA FIXA PARA NÃO CORTAR O TEXTO
-  padding: 6em 1.5em 2em 1.5em; // Espaçamento interno (mais no topo para livrar o menu)
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px; /* AUMENTADO de 250px para 300px */
+  padding: 6em 1.5em 2em 1.5em;
 }
 .sidebar a,
 .sidebar .author__name,
@@ -76,15 +76,16 @@ body {
   color: white !important;
 }
 
-/* 4. Barra superior roxa */
+/* 4. BARRA SUPERIOR (masthead) — agora roxa */
 .masthead {
-  background: #9F468F !important;
+  background-color: #9F468F !important; /* usa background-color para garantir sobreposição */
   border: none !important;
-  width: calc(100% - 250px);
-  margin-left: 250px;
+  width: calc(100% - 300px); /* ajustado para nova largura da sidebar */
+  margin-left: 300px;
+  color: white !important;
 }
 .masthead__menu-item a {
-  color: white;
+  color: white !important;
   border-radius: 5px;
 }
 .masthead__menu-item a:hover {
@@ -95,18 +96,17 @@ body {
   display: none;
 }
 
-/* 5. Ajusta a margem do conteúdo */
+/* 5. Ajusta o conteúdo principal */
 #main, .page {
-  margin-left: 270px;
+  margin-left: 320px; /* acompanha a sidebar mais larga */
   padding-right: 2em;
   max-width: 950px;
 }
 
-/* 6. Estilização CORRIGIDA dos links das publicações */
+/* 6. LINKS e BOTÕES */
 .archive__item-title a {
   color: #9F468F !important;
 }
-/* CORRIGE O BOTÃO "DOWNLOAD PAPER" */
 .archive__item .btn, .archive__item .btn--inverse {
   background: #9F468F !important;
   color: white !important;
@@ -117,11 +117,12 @@ body {
   background: #7c3870 !important;
 }
 
-/* 7. Estilo do rodapé (cor roxa e texto branco) */
+/* 7. RODAPÉ — igual à barra superior */
 .page__footer {
-  background: #9F468F;
+  background-color: #9F468F !important;
   color: white !important;
-  margin-left: 250px; // Alinha com o resto do conteúdo
+  margin-left: 300px; /* acompanha a sidebar */
+  padding: 1.5em 2em;
 }
 .page__footer a {
   color: white !important;
