@@ -1,13 +1,8 @@
 source 'https://rubygems.org'
 
-group :jekyll_plugins do
-  gem 'jekyll'
-  gem 'jekyll-feed'
-  gem 'jekyll-sitemap'
-  gem 'jekyll-redirect-from'
-  gem 'jemoji'
-  gem 'webrick', '~> 1.8'
-end
+# Esta é a única linha que você realmente precisa para o GitHub Pages.
+# Ela gerencia o Jekyll e todos os plugins necessários.
+gem 'github-pages', group: :jekyll_plugins
 
-gem 'github-pages'
-gem 'connection_pool', '2.5.0'
+# Adicionado para compatibilidade com versões mais novas do Ruby/Jekyll.
+gem 'webrick', '~> 1.8'
