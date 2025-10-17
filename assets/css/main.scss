@@ -1,43 +1,87 @@
+---
+---
+
+/*
+ * This file controls what is imported from /_sass
+ *
+ * Note that the files are processed in the order they are imported, so they are partly
+   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ */
+
+@import
+    "vendor/breakpoint/breakpoint",
+
+    "themes",
+    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+
+    "include/mixins",
+    "vendor/susy/susy",
+
+    "layout/reset",
+    "layout/base",
+
+    "include/utilities",
+    "layout/tables",
+    "layout/buttons",
+    "layout/notices",
+    "layout/masthead",
+    "layout/navigation",
+    "layout/footer",
+    "syntax",
+
+    "layout/forms",
+
+    "layout/page",
+    "layout/archive",
+    "layout/sidebar",
+    "layout/json_cv",
+
+    "vendor/font-awesome/fontawesome",
+    "vendor/font-awesome/solid",
+    "vendor/font-awesome/brands"
+;
 /* ==========================================================================
-   ESTILOS PERSONALIZADOS FINAIS - Karolina
+   ESTILOS PERSONALIZADOS - Karolina
    ========================================================================== */
 
 // 1. Fundo geral roxo para toda a página
 body {
-  background: #9F468F !important;
+  background-color: #9F468F;
 }
 
-// 2. Barra lateral com o mesmo fundo roxo e texto branco
-.sidebar {
-  background: #9F468F !important;
-  color: white;
-  padding: 1em;
-  border-radius: 10px;
-}
-.sidebar a {
-  color: white !important;
-}
-
-// 3. Barra superior (cabeçalho) com o mesmo fundo roxo e texto branco
+// 2. Barra superior (cabeçalho) fica transparente para mostrar o roxo do fundo
 .masthead {
-  background: #9F468F !important;
-  border-bottom: 1px solid #dcdcdc !important; // Linha fina
+  background: transparent !important;
+  border: none !important; // Remove a linha divisória que já não faz sentido
 }
+// Garante que o texto do menu na barra superior é branco
 .masthead__menu-item a {
   color: white;
 }
+// Adiciona o efeito de hover que você pediu
 .masthead__menu-item a:hover {
-  background-color: #B565A7; // Tom de roxo mais claro para hover
-  border-radius: 5px;
+  background-color: #B565A7; // Um tom de roxo mais claro para contraste
 }
 
-// 4. Área de conteúdo principal com fundo cinza escuro e texto branco
-#main {
-  background: #2c2c2c;
+// 3. Barra lateral também fica transparente para mostrar o roxo
+.sidebar {
+  background: transparent !important;
   color: white;
+
+  // Garante que os links da barra lateral são brancos
+  a {
+    color: white !important;
+  }
+}
+
+// 4. Área de conteúdo principal (#main) com fundo cinza escuro
+#main {
+  background-color: #2c2c2c;
+  color: white; // Texto principal fica branco
   padding: 2em;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 // 5. Links dentro da área de conteúdo ficam roxos e estilizados
