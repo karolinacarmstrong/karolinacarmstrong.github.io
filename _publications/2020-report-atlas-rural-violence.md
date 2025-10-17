@@ -1,5 +1,5 @@
 ---
-title: "<b>Atlas of Rural Violence in Brazil: Socioeconomic and Territorial Conditions</b>"
+title: '<b>Atlas of Rural Violence in Brazil: Socioeconomic and Territorial Conditions</b>'
 collection: publications
 permalink: /publication/2020-report-atlas-rural-violence
 date: 2020-09-01
