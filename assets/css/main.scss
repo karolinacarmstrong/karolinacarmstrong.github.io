@@ -1,43 +1,56 @@
----
----
+/* ==========================================================================
+   ESTILOS PERSONALIZADOS - Karolina
+   ========================================================================== */
 
-/*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
- */
+// 1. Fundo geral roxo para toda a página
+body {
+  background-color: #9F468F;
+}
 
-@import
-    "vendor/breakpoint/breakpoint",
+// 2. Barra superior (cabeçalho) fica transparente para mostrar o roxo do fundo
+.masthead {
+  background: transparent !important;
+  border: none !important; // Remove a linha divisória que já não faz sentido
+}
+// Garante que o texto do menu na barra superior é branco
+.masthead__menu-item a {
+  color: white;
+}
+// Adiciona o efeito de hover que você pediu
+.masthead__menu-item a:hover {
+  background-color: #B565A7; // Um tom de roxo mais claro para contraste
+}
 
-    "themes",
-    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+// 3. Barra lateral também fica transparente para mostrar o roxo
+.sidebar {
+  background: transparent !important;
+  color: white;
 
-    "include/mixins",
-    "vendor/susy/susy",
+  // Garante que os links da barra lateral são brancos
+  a {
+    color: white !important;
+  }
+}
 
-    "layout/reset",
-    "layout/base",
+// 4. Área de conteúdo principal (#main) com fundo cinza escuro
+#main {
+  background-color: #2c2c2c;
+  color: white; // Texto principal fica branco
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
-    "include/utilities",
-    "layout/tables",
-    "layout/buttons",
-    "layout/notices",
-    "layout/masthead",
-    "layout/navigation",
-    "layout/footer",
-    "syntax",
-
-    "layout/forms",
-
-    "layout/page",
-    "layout/archive",
-    "layout/sidebar",
-    "layout/json_cv",
-
-    "vendor/font-awesome/fontawesome",
-    "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands"
-;
+// 5. Links dentro da área de conteúdo ficam roxos e estilizados
+.page__content a {
+  color: #9F468F;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #9F468F;
+  padding-bottom: 2px;
+  transition: all 0.2s ease-in-out;
+}
+.page__content a:hover {
+  color: white;
+  background-color: #9F468F;
+}
