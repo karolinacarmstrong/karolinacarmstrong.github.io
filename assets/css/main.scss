@@ -48,7 +48,7 @@
 /* 1. Fundo branco geral e texto preto */
 body {
   background: white !important;
-  color: black;
+  color: black !important;
 }
 
 /* 2. Remove caixas e sombras do conteúdo */
@@ -59,16 +59,17 @@ body {
   padding-top: 2em;
 }
 
-/* 3. SIDEBAR — agora mais larga */
+/* 3. SIDEBAR — MAIS LARGA e fixa */
 .sidebar {
   background: #9F468F !important;
-  color: white;
+  color: white !important;
   height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
-  width: 300px; /* AUMENTADO de 250px para 300px */
-  padding: 6em 1.5em 2em 1.5em;
+  width: 340px; /* AUMENTADO: 340px */
+  padding: 6em 1.8em 2em 1.8em;
+  overflow-y: auto; /* permite rolagem se o conteúdo for longo */
 }
 .sidebar a,
 .sidebar .author__name,
@@ -76,14 +77,25 @@ body {
   color: white !important;
 }
 
-/* 4. BARRA SUPERIOR (masthead) — agora roxa */
-.masthead {
-  background-color: #9F468F !important; /* usa background-color para garantir sobreposição */
+/* 4. BARRA SUPERIOR (masthead) — totalmente roxa */
+.masthead,
+.masthead::before,
+.masthead::after {
+  background-color: #9F468F !important;
   border: none !important;
-  width: calc(100% - 300px); /* ajustado para nova largura da sidebar */
-  margin-left: 300px;
   color: white !important;
+  box-shadow: none !important;
 }
+
+.masthead {
+  width: calc(100% - 340px); /* ajustado para acompanhar sidebar */
+  margin-left: 340px;
+  position: fixed; /* fixa no topo */
+  top: 0;
+  left: 340px;
+  z-index: 999; /* garante que fica acima do conteúdo */
+}
+
 .masthead__menu-item a {
   color: white !important;
   border-radius: 5px;
@@ -96,9 +108,10 @@ body {
   display: none;
 }
 
-/* 5. Ajusta o conteúdo principal */
+/* 5. Ajuste da margem e espaçamento do conteúdo */
 #main, .page {
-  margin-left: 320px; /* acompanha a sidebar mais larga */
+  margin-left: 360px; /* acompanha a sidebar */
+  padding-top: 5em; /* espaço por causa da barra fixa */
   padding-right: 2em;
   max-width: 950px;
 }
@@ -121,10 +134,16 @@ body {
 .page__footer {
   background-color: #9F468F !important;
   color: white !important;
-  margin-left: 300px; /* acompanha a sidebar */
+  margin-left: 340px; /* acompanha sidebar */
   padding: 1.5em 2em;
 }
 .page__footer a {
   color: white !important;
   text-decoration: underline;
 }
+
+/* 8. Corrige o alinhamento do conteúdo principal */
+.page__content {
+  padding-top: 6em !important; /* espaço extra para o masthead fixo */
+}
+
