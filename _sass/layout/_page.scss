@@ -24,20 +24,19 @@
   }
 
   .page__inner-wrap {
-  background: #2c2c2c; // O seu fundo cinza escuro
-  color: white;        // Texto principal branco
-  padding: 2em;
-  border-radius: 10px; // Cantos arredondados
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); // Sombra subtil
-}
-
-    .page__content,
-    .page__meta,
-    .page__share {
-      @include full();
-    }
+    background: #2c2c2c; // O seu fundo cinza escuro
+    color: white;        // Texto principal branco
+    padding: 2em;
+    border-radius: 10px; // Cantos arredondados
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); // Sombra subtil
   }
-}
+
+  .page__content,
+  .page__meta,
+  .page__share {
+    @include full();
+  }
+} // A chaveta extra que estava aqui foi removida.
 
 .page__title {
   margin-top: 0;
@@ -54,9 +53,28 @@
 }
 
 .page__content {
-  // ... outras regras como h2, p, li ...
 
-  /* Estilo personalizado para os links dentro do conteúdo */
+  h2 {
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid var(--global-border-color);
+  }
+
+  p, li, dl {
+    font-size: 1em;
+  }
+
+  p {
+    margin: 0 0 $indent-var;
+
+    @if $paragraph-indent == true {
+      & + p {
+        text-indent: $indent-var;
+        margin-top: -($indent-var);
+      }
+    }
+  }
+
+  /* SEU NOVO ESTILO DE LINK ESTÁ AQUI */
   a {
     color: #9F468F;
     text-decoration: none;
@@ -71,41 +89,7 @@
       border-bottom-color: white;
     }
   }
-
-
-  h2 {
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid var(--global-border-color);
-  }
-
-  p, li, dl {
-    font-size: 1em;
-  }
-
-  /* paragraph indents */
-  p {
-    margin: 0 0 $indent-var;
-
-    /* sibling indentation*/
-    @if $paragraph-indent == true {
-      & + p {
-        text-indent: $indent-var;
-        margin-top: -($indent-var);
-      }
-    }
-  }
-
-  a {
-    text-decoration: underline;
-
-    &:hover {
-      text-decoration: underline;
-
-      img {
-        box-shadow: 0 0 10px rgba(#000, 0.25);
-      }
-    }
-  }
+  /* O ESTILO DE LINK DUPLICADO FOI REMOVIDO DEPOIS DESTE PONTO */
 
   dt {
     margin-top: 1em;
@@ -123,7 +107,6 @@
     font-size: $type-size-6;
   }
 
-  /* blockquote citations */
   blockquote + .small {
     margin-top: -1.5em;
     padding-left: 1.25rem;
