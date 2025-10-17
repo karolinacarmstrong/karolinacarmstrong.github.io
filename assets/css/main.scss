@@ -42,24 +42,24 @@
     "vendor/font-awesome/brands"
 ;
 /* ==========================================================================
-   ESTILOS PERSONALIZADOS FINAIS - CORREÇÃO COMPLETA
+   ESTILOS PERSONALIZADOS FINAIS - VERSÃO DEFINITIVA
    ========================================================================== */
 
 /* 1. Fundo branco para a área de conteúdo e texto preto */
 body {
   background: white !important;
-  color: black; // Garante que o texto padrão é preto
+  color: black;
 }
 
-/* 2. Remove completamente a caixa cinza e a sombra, e força o texto a ser preto */
+/* 2. Remove completamente a caixa cinza e a sombra */
 #main, .page__inner-wrap {
   background: transparent !important;
   box-shadow: none !important;
   color: black !important;
-  padding-top: 2em; // Adiciona um pouco de espaço no topo do conteúdo
+  padding-top: 2em;
 }
 
-/* 3. Barra lateral roxa, com altura total, encostada à esquerda e com largura definida */
+/* 3. Barra lateral roxa, com altura total e encostada à esquerda */
 .sidebar {
   background: #9F468F !important;
   color: white;
@@ -79,9 +79,9 @@ body {
 /* 4. Barra superior roxa */
 .masthead {
   background: #9F468F !important;
-  border: none !important; // Remove a linha
-  width: calc(100% - 250px); // Largura total menos a largura da sidebar
-  margin-left: 250px; // Empurra a barra superior para a direita da sidebar
+  border: none !important;
+  width: calc(100% - 250px);
+  margin-left: 250px;
 }
 .masthead__menu-item a {
   color: white;
@@ -91,26 +91,39 @@ body {
   background-color: white !important;
   color: #9F468F !important;
 }
-// Remove o ícone de casa da barra superior, pois já temos a barra lateral
 .masthead__menu-item--lg {
   display: none;
 }
 
-/* 5. Ajusta a margem da área de conteúdo para não ficar debaixo da sidebar */
+/* 5. Ajusta a margem do conteúdo */
 #main, .page {
-  margin-left: 270px; // Empurra o conteúdo para a direita da sidebar (um pouco mais para ter margem)
-  max-width: 900px; // Define uma largura máxima para o texto não ficar demasiado largo
+  margin-left: 270px;
+  padding-right: 2em;
+  max-width: 950px;
 }
 
-/* 6. Estiliza os links das publicações para ficarem roxos */
+/* 6. Estilização CORRIGIDA dos links das publicações */
 .archive__item-title a {
   color: #9F468F !important;
 }
-.archive__item .btn {
+/* CORRIGE O BOTÃO "DOWNLOAD PAPER" */
+.archive__item .btn, .archive__item .btn--inverse {
   background: #9F468F !important;
   color: white !important;
-  border: none;
+  border: none !important;
+  box-shadow: none !important;
 }
-.archive__item .btn:hover {
-  background: #7c3870 !important; // Um tom de roxo mais escuro no hover
+.archive__item .btn:hover, .archive__item .btn--inverse:hover {
+  background: #7c3870 !important;
+}
+
+/* 7. Estilo do rodapé (cor roxa e texto branco) */
+.page__footer {
+  background: #9F468F;
+  color: white !important;
+  margin-left: 250px; // Alinha com o resto do conteúdo
+}
+.page__footer a {
+  color: white !important;
+  text-decoration: underline;
 }
