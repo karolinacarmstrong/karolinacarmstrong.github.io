@@ -4,27 +4,16 @@
 
 .masthead {
   position: fixed;
-  background: #9F468F;
-  border-bottom: 0.5px solid #dcdcdc;
+  background: #9F468F; // Sua cor roxa
+  border-bottom: 1px solid #dcdcdc; // Sua linha mais fina (ajustei para 1px como pediu)
   height: fit-content;
   top: 0;
   width: 100%;
-
-  -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
-  -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
+  animation: intro 0.3s both;
+  animation-delay: 0.15s;
   z-index: 20;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    height: 1px;
-    background: #9F468F;
-    border-bottom: 3px solid #dcdcdc;
-    width: 100%;
-  }
+  /* A secção &::after foi removida por ser redundante */
 
   &__inner-wrap {
     @include container;
@@ -42,12 +31,12 @@
 
     a {
       text-decoration: none;
+      color: white; // Garante que o ícone da casa é branco
     }
   }
 }
 
 .masthead__menu {
-
   ul {
     margin: 0;
     padding: 0;
@@ -56,15 +45,27 @@
   }
 }
 
-/* Efeito de hover para os itens do menu */
-.masthead__menu-item a: hover {
-  background-color: #D8D8F0; /* Um tom mais escuro que #E6E6FA */
-  border-radius: 5px;       /* Bónus: cantos arredondados */
-  transition: background-color 0.2s ease-in-out; /* Bónus: transição suave */
-  color: white;
-}
+.masthead__menu-item {
+  display: block;
+  list-style-type: none;
+  white-space: nowrap;
 
+  a {
+    padding: 0.7em 1em;
+    color: white; // Garante que os links do menu são brancos
+    display: block;
+  }
+
+  /* Bloco &--lg movido para dentro do seu pai */
   &--lg {
     padding-right: 2em;
     font-weight: 700;
   }
+}
+
+/* Efeito de hover CORRIGIDO (sem espaço) */
+.masthead__menu-item a:hover {
+  background-color: #B565A7; /* Um tom mais claro que #9F468F para contraste */
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
