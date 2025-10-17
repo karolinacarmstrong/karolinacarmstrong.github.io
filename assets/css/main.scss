@@ -47,12 +47,12 @@
 
 // 1. Fundo geral roxo para toda a página
 body {
-  background-color: #9F468F;
+  background-color: #B565A7;
 }
 
 // 2. Barra superior (cabeçalho) fica transparente para mostrar o roxo do fundo
 .masthead {
-  background: transparent !important;
+  background: #9F468F !important;
   border: none !important; // Remove a linha divisória que já não faz sentido
 }
 // Garante que o texto do menu na barra superior é branco
@@ -61,12 +61,12 @@ body {
 }
 // Adiciona o efeito de hover que você pediu
 .masthead__menu-item a:hover {
-  background-color: #B565A7; // Um tom de roxo mais claro para contraste
+  background-color: #9F468F; // Um tom de roxo mais claro para contraste
 }
 
 // 3. Barra lateral também fica transparente para mostrar o roxo
 .sidebar {
-  background: transparent !important;
+  background: #9F468F !important;
   color: white;
 
   // Garante que os links da barra lateral são brancos
@@ -77,7 +77,7 @@ body {
 
 // 4. Área de conteúdo principal (#main) com fundo cinza escuro
 #main {
-  background-color: #2c2c2c;
+  background-color: transparent;
   color: white; // Texto principal fica branco
   padding: 2em;
   border-radius: 10px;
