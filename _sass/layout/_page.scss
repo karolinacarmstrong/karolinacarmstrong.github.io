@@ -24,7 +24,11 @@
   }
 
   .page__inner-wrap {
-  background: transparent; // Garante que o invólucro do conteúdo tem a cor certa
+  background: #2c2c2c; // O seu fundo cinza escuro
+  color: white;        // Texto principal branco
+  padding: 2em;
+  border-radius: 10px; // Cantos arredondados
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); // Sombra subtil
 }
 
     .page__content,
