@@ -1,44 +1,43 @@
 /* ==========================================================================
-   ESTILOS PERSONALIZADOS - Karolina
+   ESTILOS PERSONALIZADOS FINAIS - Karolina
    ========================================================================== */
 
 // 1. Fundo geral roxo para toda a página
 body {
-  background-color: #9F468F;
+  background: #9F468F !important;
 }
 
-// 2. Barra superior (cabeçalho) fica transparente para mostrar o roxo do fundo
-.masthead {
-  background: transparent !important;
-  border: none !important; // Remove a linha divisória que já não faz sentido
+// 2. Barra lateral com o mesmo fundo roxo e texto branco
+.sidebar {
+  background: #9F468F !important;
+  color: white;
+  padding: 1em;
+  border-radius: 10px;
 }
-// Garante que o texto do menu na barra superior é branco
+.sidebar a {
+  color: white !important;
+}
+
+// 3. Barra superior (cabeçalho) com o mesmo fundo roxo e texto branco
+.masthead {
+  background: #9F468F !important;
+  border-bottom: 1px solid #dcdcdc !important; // Linha fina
+}
 .masthead__menu-item a {
   color: white;
 }
-// Adiciona o efeito de hover que você pediu
 .masthead__menu-item a:hover {
-  background-color: #B565A7; // Um tom de roxo mais claro para contraste
+  background-color: #B565A7; // Tom de roxo mais claro para hover
+  border-radius: 5px;
 }
 
-// 3. Barra lateral também fica transparente para mostrar o roxo
-.sidebar {
-  background: transparent !important;
-  color: white;
-
-  // Garante que os links da barra lateral são brancos
-  a {
-    color: white !important;
-  }
-}
-
-// 4. Área de conteúdo principal (#main) com fundo cinza escuro
+// 4. Área de conteúdo principal com fundo cinza escuro e texto branco
 #main {
-  background-color: #2c2c2c;
-  color: white; // Texto principal fica branco
+  background: #2c2c2c;
+  color: white;
   padding: 2em;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 // 5. Links dentro da área de conteúdo ficam roxos e estilizados
