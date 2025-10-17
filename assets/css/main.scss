@@ -49,28 +49,29 @@
    ESTILOS PERSONALIZADOS FINAIS - CORREÇÃO COMPLETA
    ========================================================================== */
 
+/* ==========================================================================
+   ESTILOS PERSONALIZADOS FINAIS - CORREÇÃO COMPLETA
+   ========================================================================== */
+
 /* 1. Fundo branco para a área de conteúdo e texto preto */
 body {
   background: white !important;
   color: black; // Garante que o texto padrão é preto
 }
 
-/* 2. Remove completamente a caixa cinza e a sombra */
+/* 2. Remove completamente a caixa cinza e a sombra, e força o texto a ser preto */
 #main, .page__inner-wrap {
   background: transparent !important;
-  box-shadow: transparent !important;
-  color: black !important; // Força o texto a ser preto
-  padding: 2em; // Devolve o espaçamento interior
+  box-shadow: none !important;
+  color: black !important;
 }
 
-/* 3. Barra lateral roxa, com altura total e encostada à esquerda */
+/* 3. Barra lateral roxa, com altura total e texto branco */
 .sidebar {
   background: #9F468F !important;
   color: white;
-  height: 100vh; // Altura total
-  position: fixed; // Fixa na lateral
-  left: 0; // ENCOSTA A BARRA À ESQUERDA
-  padding-top: 5em; // Desce o conteúdo para não ficar atrás do menu
+  height: 100vh;
+  position: fixed;
 }
 .sidebar a,
 .sidebar .author__name,
@@ -81,20 +82,33 @@ body {
 /* 4. Barra superior roxa (sem faixa branca) */
 .masthead, .greedy-nav {
   background: #9F468F !important;
-  border: none !important; // Remove a linha
+  border: none !important;
 }
 .masthead__menu-item a {
   color: white;
   border-radius: 5px;
 }
-
-/* 5. Efeito de hover nos botões (fundo branco, texto roxo) */
 .masthead__menu-item a:hover {
   background-color: white !important;
   color: #9F468F !important;
 }
 
+/* 5. ESTILIZAÇÃO CORRETA DOS LINKS DAS PUBLICAÇÕES */
+/* Para o título da publicação */
+.archive__item-title a {
+  color: #9F468F !important;
+}
+/* Para o link "Download Paper", que é um botão */
+.archive__item .btn {
+  background: #9F468F !important;
+  color: white !important;
+  border: none;
+}
+.archive__item .btn:hover {
+  background: #7c3870 !important; // Um tom de roxo mais escuro no hover
+}
+
 /* 6. Ajusta a margem da área de conteúdo para não ficar debaixo da sidebar */
-.page {
+.page, #main {
   margin-left: 275px; // Empurra o conteúdo para a direita da sidebar
 }
