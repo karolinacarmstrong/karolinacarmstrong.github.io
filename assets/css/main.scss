@@ -42,16 +42,18 @@
     "vendor/font-awesome/brands"
 ;
 /* ==========================================================================
-   ESTILOS PERSONALIZADOS FINAIS - VERSÃO DEFINITIVA (CORRIGIDO)
+   ESTILOS PERSONALIZADOS FINAIS - VERSÃO CORRIGIDA COMPLETA
    ========================================================================== */
 
-/* 1. Fundo branco geral e texto preto */
+/* 1. Fundo geral branco e texto preto */
 body {
   background: white !important;
   color: black !important;
+  margin: 0;
+  padding: 0;
 }
 
-/* 2. Remove caixas e sombras do conteúdo */
+/* 2. Remove sombras e caixas */
 #main, .page__inner-wrap {
   background: transparent !important;
   box-shadow: none !important;
@@ -59,7 +61,7 @@ body {
   padding-top: 2em;
 }
 
-/* 3. SIDEBAR — MAIS LARGA e fixa */
+/* 3. SIDEBAR — mais larga, sem bordas arredondadas, encostada */
 .sidebar {
   background: #9F468F !important;
   color: white !important;
@@ -67,9 +69,11 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  width: 340px; /* AUMENTADO: 340px */
-  padding: 6em 1.8em 2em 1.8em;
-  overflow-y: auto; /* permite rolagem se o conteúdo for longo */
+  width: 370px; /* AUMENTADO para não cortar texto */
+  padding: 5em 1.8em 2em 1.8em;
+  overflow-y: auto;
+  border-radius: 0 !important; /* remove cantos arredondados */
+  margin: 0 !important;
 }
 .sidebar a,
 .sidebar .author__name,
@@ -77,7 +81,7 @@ body {
   color: white !important;
 }
 
-/* 4. BARRA SUPERIOR (masthead) — totalmente roxa */
+/* 4. BARRA SUPERIOR — totalmente roxa e encostada */
 .masthead,
 .masthead::before,
 .masthead::after {
@@ -88,17 +92,22 @@ body {
 }
 
 .masthead {
-  width: calc(100% - 340px); /* ajustado para acompanhar sidebar */
-  margin-left: 340px;
-  position: fixed; /* fixa no topo */
+  width: calc(100% - 370px);
+  margin-left: 370px;
+  position: fixed;
   top: 0;
-  left: 340px;
-  z-index: 999; /* garante que fica acima do conteúdo */
+  left: 370px;
+  z-index: 999;
+  height: 70px;
+  display: flex;
+  align-items: center;
 }
 
+/* 5. Menus da barra superior */
 .masthead__menu-item a {
   color: white !important;
-  border-radius: 5px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }
 .masthead__menu-item a:hover {
   background-color: white !important;
@@ -108,15 +117,15 @@ body {
   display: none;
 }
 
-/* 5. Ajuste da margem e espaçamento do conteúdo */
+/* 6. Conteúdo principal ajustado */
 #main, .page {
-  margin-left: 360px; /* acompanha a sidebar */
-  padding-top: 5em; /* espaço por causa da barra fixa */
+  margin-left: 390px; /* acompanha sidebar */
+  padding-top: 6em; /* espaço p/ masthead fixa */
   padding-right: 2em;
   max-width: 950px;
 }
 
-/* 6. LINKS e BOTÕES */
+/* 7. LINKS e BOTÕES */
 .archive__item-title a {
   color: #9F468F !important;
 }
@@ -130,20 +139,22 @@ body {
   background: #7c3870 !important;
 }
 
-/* 7. RODAPÉ — igual à barra superior */
+/* 8. RODAPÉ — igual à barra superior e encostado */
 .page__footer {
   background-color: #9F468F !important;
   color: white !important;
-  margin-left: 340px; /* acompanha sidebar */
+  margin-left: 370px;
   padding: 1.5em 2em;
+  border-top: none !important;
 }
 .page__footer a {
   color: white !important;
   text-decoration: underline;
 }
 
-/* 8. Corrige o alinhamento do conteúdo principal */
-.page__content {
-  padding-top: 6em !important; /* espaço extra para o masthead fixo */
+/* 9. Remove espaços visuais extras entre sidebar, topo e rodapé */
+.page__content,
+.wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
 }
-
