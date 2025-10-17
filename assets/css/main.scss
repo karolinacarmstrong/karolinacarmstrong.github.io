@@ -45,30 +45,32 @@
    ESTILOS PERSONALIZADOS - Karolina
    ========================================================================== */
 
-// 1. Fundo geral roxo para toda a página
+/* ==========================================================================
+   ESTILOS PERSONALIZADOS FINAIS - CORREÇÃO COMPLETA
+   ========================================================================== */
+
+/* 1. Fundo branco para a área de conteúdo e texto preto */
 body {
   background: white !important;
-}
-#main {
-  background: transparent; // REMOVE O POLÍGONO CINZA
-  color: black;            // DEIXA AS LETRAS PRETAS
-  box-shadow: none;        // Remove a sombra
-  padding-top: 2em;        // Adiciona um pouco de espaço do topo
-}
-/* Remove a caixa escura de dentro do "About me" */
-.page__inner-wrap {
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
-  color: inherit;
+  color: black; // Garante que o texto padrão é preto
 }
 
-/* 2. Barra lateral roxa, com altura total da página e texto branco */
+/* 2. Remove completamente a caixa cinza e a sombra */
+#main, .page__inner-wrap {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: black !important; // Força o texto a ser preto
+  padding: 2em; // Devolve o espaçamento interior
+}
+
+/* 3. Barra lateral roxa, com altura total e encostada à esquerda */
 .sidebar {
   background: #9F468F !important;
   color: white;
-  height: 100vh; // FAZ A BARRA IR ATÉ O FINAL
-  position: fixed; // Fixa a barra na lateral
+  height: 100vh; // Altura total
+  position: fixed; // Fixa na lateral
+  left: 0; // ENCOSTA A BARRA À ESQUERDA
+  padding-top: 5em; // Desce o conteúdo para não ficar atrás do menu
 }
 .sidebar a,
 .sidebar .author__name,
@@ -76,17 +78,23 @@ body {
   color: white !important;
 }
 
-/* 3. Barra superior roxa (sem faixa branca) e texto branco */
+/* 4. Barra superior roxa (sem faixa branca) */
 .masthead, .greedy-nav {
   background: #9F468F !important;
+  border: none !important; // Remove a linha
 }
 .masthead__menu-item a {
   color: white;
   border-radius: 5px;
 }
 
-/* 4. Efeito de hover nos botões (fundo branco, texto roxo) */
+/* 5. Efeito de hover nos botões (fundo branco, texto roxo) */
 .masthead__menu-item a:hover {
   background-color: white !important;
   color: #9F468F !important;
+}
+
+/* 6. Ajusta a margem da área de conteúdo para não ficar debaixo da sidebar */
+.page {
+  margin-left: 275px; // Empurra o conteúdo para a direita da sidebar
 }
