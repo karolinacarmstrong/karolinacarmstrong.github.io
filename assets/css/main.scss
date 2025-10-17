@@ -58,7 +58,7 @@ body {
 /* 2. Remove completamente a caixa cinza e a sombra */
 #main, .page__inner-wrap {
   background: transparent !important;
-  box-shadow: none !important;
+  box-shadow: transparent !important;
   color: black !important; // Força o texto a ser preto
   padding: 2em; // Devolve o espaçamento interior
 }
