@@ -1,5 +1,5 @@
 ---
-title: "Federal Intervention in Rio De Janeiro and the Organizations of Civil Society"
+title: '<b>Federal Intervention in Rio De Janeiro and the Organizations of Civil Society</b>'
 collection: publications
 permalink: /publication/2019-report-federal-intervention-rio
 date: '2019-06-01'
