@@ -57,10 +57,11 @@
 }
 
 /* Efeito de hover para os itens do menu */
-.masthead__menu-item a:hover {
+.masthead__menu-item a: hover {
   background-color: #D8D8F0; /* Um tom mais escuro que #E6E6FA */
   border-radius: 5px;       /* Bónus: cantos arredondados */
   transition: background-color 0.2s ease-in-out; /* Bónus: transição suave */
+  color: white;
 }
 
   &--lg {
