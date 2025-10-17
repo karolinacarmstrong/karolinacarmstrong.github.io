@@ -5,6 +5,18 @@
 /* ==========================================================================
    TYPOGRAPHY
    ========================================================================== */
+body {
+  background-color: #9F468F; // Cor roxa para o fundo geral
+}
+
+.sidebar {
+  background: #9F468F !important; // Garante que o roxo é aplicado
+  color: white;                   // Define o texto da sidebar para branco
+
+  a {
+    color: white !important; // Garante que os links na sidebar são brancos
+  }
+}
 
 /* Used to set the size for <em> */
 $doc-font-size              : 16;
