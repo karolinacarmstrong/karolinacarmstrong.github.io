@@ -54,6 +54,24 @@
 }
 
 .page__content {
+  // ... outras regras como h2, p, li ...
+
+  /* Estilo personalizado para os links dentro do conteúdo */
+  a {
+    color: #9F468F;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #9F468F;
+    padding-bottom: 2px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: white;
+      background-color: #9F468F;
+      border-bottom-color: white;
+    }
+  }
+
 
   h2 {
     padding-bottom: 0.5em;
