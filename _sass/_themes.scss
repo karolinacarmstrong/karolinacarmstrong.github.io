@@ -5,19 +5,6 @@
 /* ==========================================================================
    TYPOGRAPHY
    ========================================================================== */
-body {
-  background-color: #9F468F; // Cor roxa para o fundo geral
-}
-
-.sidebar {
-  background: #9F468F !important; // Garante que o roxo é aplicado
-  color: white;                   // Define o texto da sidebar para branco
-
-  a {
-    color: white !important; // Garante que os links na sidebar são brancos
-  }
-}
-
 /* Used to set the size for <em> */
 $doc-font-size              : 16;
 
@@ -115,3 +102,47 @@ $vine-color                 : #00bf8f;
 $youtube-color              : #bb0000;
 $xing-color                 : #006567;
    
+/* ==========================================================================
+   ESTILOS PERSONALIZADOS - Karolina
+   ========================================================================== */
+
+body {
+  background-color: #9F468F; /* Fundo geral roxo */
+}
+
+.masthead {
+  background: transparent !important; /* Deixa o fundo roxo aparecer */
+  border: none; /* Remove a linha cinzenta */
+}
+
+.sidebar {
+  background: transparent !important; /* Deixa o fundo roxo aparecer */
+  color: white;
+
+  a {
+    color: white !important;
+  }
+}
+
+#main {
+  background-color: #2c2c2c; /* Fundo cinza escuro para a área de conteúdo */
+  color: white;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Cor dos links no conteúdo */
+.page__content a {
+  color: #9F468F;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #9F468F;
+  padding-bottom: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.page__content a:hover {
+  color: white;
+  background-color: #9F468F;
+}
