@@ -101,17 +101,17 @@ Complementary Education
   * Python (30h)
 
 * **Brazilian Institute of Sustainability, Online School**
-  *ESG, What Every Professional Should Know (8h)
+  * ESG, What Every Professional Should Know (8h)
   
 * **AmbientalPro, Online School**
   * Geoprocessing Training (180h)
-  * 
+    
 * **Federal Institute of Education, Science and Technology of Southern Minas Gerais, Online School**
   * Processing of Photogrammetric Data Obtained with Drones (60h)
-  * 
+    
 * **SELPER Brazil, São José dos Campos, SP, Brazil**
   * GEOBIA (Image Analysis Based on Geographic Objects) (40h)
-  * 
+    
 * **Brazilian Association of Epidemiology Professionals Field ProEpi, Online School**
   * Geoprocessing in Health (40h)
   
