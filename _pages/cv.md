@@ -24,7 +24,7 @@ Work experience
   * 2018-2020: Undergraduate Internship
   * Duties include: Thematic map creation, geospatial workflow automation with R and Python, and contributing to 18+ academic publications.
 
-* **UN-Habitat, Pereira Passos Institute (IPP), United Nations Agency, Rio de Janeiro, RJ, Brazil **
+* **UN-Habitat, Pereira Passos Institute (IPP), United Nations Agency, Rio de Janeiro, RJ, Brazil**
   * 2024-2025: Information Assistant GIS
   * Duties include: Working with SDG indicators, developing Web solutions on ArcGIS Enterprise, and processing microdata.
 
