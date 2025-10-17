@@ -42,45 +42,33 @@
     "vendor/font-awesome/brands"
 ;
 /* ==========================================================================
-   ESTILOS PERSONALIZADOS - Karolina
-   ========================================================================== */
-
-/* ==========================================================================
    ESTILOS PERSONALIZADOS FINAIS - CORREÇÃO COMPLETA
-   ========================================================================== */
-
-/* ==========================================================================
-   ESTILOS PERSONALIZADOS FINAIS - CORREÇÃO COMPLETA
-   ========================================================================== */
-
-/* ==========================================================================
-   ESTILOS PERSONALIZADOS FINAIS - VERSÃO DEFINITIVA
    ========================================================================== */
 
 /* 1. Fundo branco para a área de conteúdo e texto preto */
 body {
   background: white !important;
-  color: black;
+  color: black; // Garante que o texto padrão é preto
 }
 
-/* 2. Remove completamente a caixa cinza e a sombra */
+/* 2. Remove completamente a caixa cinza e a sombra, e força o texto a ser preto */
 #main, .page__inner-wrap {
   background: transparent !important;
   box-shadow: none !important;
   color: black !important;
-  padding-top: 2em;
+  padding-top: 2em; // Adiciona um pouco de espaço no topo do conteúdo
 }
 
-/* 3. Barra lateral roxa, com altura total e encostada à esquerda */
+/* 3. Barra lateral roxa, com altura total, encostada à esquerda e com largura definida */
 .sidebar {
   background: #9F468F !important;
   color: white;
-  height: 100vh;
-  position: fixed;
-  left: 0; // GARANTE QUE ESTÁ ENCORTADA À ESQUERDA
-  top: 0;
-  width: 250px;
-  padding: 6em 1.5em 2em 1.5em;
+  height: 100vh; // Altura total da janela
+  position: fixed; // Fixa na lateral
+  left: 0; // ENCOSTA A BARRA À MARGEM ESQUERDA
+  top: 0; // Garante que começa no topo
+  width: 250px; // DEFINE UMA LARGURA FIXA PARA NÃO CORTAR O TEXTO
+  padding: 6em 1.5em 2em 1.5em; // Espaçamento interno (mais no topo para livrar o menu)
 }
 .sidebar a,
 .sidebar .author__name,
@@ -91,9 +79,9 @@ body {
 /* 4. Barra superior roxa */
 .masthead {
   background: #9F468F !important;
-  border: none !important;
-  width: calc(100% - 250px);
-  margin-left: 250px;
+  border: none !important; // Remove a linha
+  width: calc(100% - 250px); // Largura total menos a largura da sidebar
+  margin-left: 250px; // Empurra a barra superior para a direita da sidebar
 }
 .masthead__menu-item a {
   color: white;
@@ -103,39 +91,26 @@ body {
   background-color: white !important;
   color: #9F468F !important;
 }
+// Remove o ícone de casa da barra superior, pois já temos a barra lateral
 .masthead__menu-item--lg {
   display: none;
 }
 
-/* 5. Ajusta a margem do conteúdo */
+/* 5. Ajusta a margem da área de conteúdo para não ficar debaixo da sidebar */
 #main, .page {
-  margin-left: 270px;
-  padding-right: 2em;
-  max-width: 950px;
+  margin-left: 270px; // Empurra o conteúdo para a direita da sidebar (um pouco mais para ter margem)
+  max-width: 900px; // Define uma largura máxima para o texto não ficar demasiado largo
 }
 
-/* 6. Estilização CORRIGIDA dos links das publicações */
+/* 6. Estiliza os links das publicações para ficarem roxos */
 .archive__item-title a {
   color: #9F468F !important;
 }
-/* CORRIGE O BOTÃO "DOWNLOAD PAPER" */
-.archive__item .btn, .archive__item .btn--inverse {
+.archive__item .btn {
   background: #9F468F !important;
   color: white !important;
-  border: none !important;
-  box-shadow: none !important;
+  border: none;
 }
-.archive__item .btn:hover, .archive__item .btn--inverse:hover {
-  background: #7c3870 !important;
-}
-
-/* 7. Estilo do rodapé (cor roxa e texto branco) */
-.page__footer {
-  background: #9F468F;
-  color: white !important;
-  margin-left: 250px; // Alinha com o resto do conteúdo
-}
-.page__footer a {
-  color: white !important;
-  text-decoration: underline;
+.archive__item .btn:hover {
+  background: #7c3870 !important; // Um tom de roxo mais escuro no hover
 }
