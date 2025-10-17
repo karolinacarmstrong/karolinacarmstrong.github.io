@@ -11,54 +11,28 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* **Specialization in Software Engineering**, Union of the Americas University (UNIAMERICA), 2024 (Current)
+* **Specialization in Data Science**, Union of the Americas University (UNIAMERICA), 2024
+* **Non-degree, M.S. in Remote Sensing**, National Institute for Space Research (INPE), 2023
+* **B.S. in Geography**, Federal University of Rio de Janeiro (UFRJ), 2022
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* **2022-Present: Research Assistant**
+  * Institute of Applied Economic Research (Ipea)
+  * Duties include: Thematic map creation, geospatial workflow automation with R and Python, and contributing to 18+ academic publications.
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* **2024-2025: Information Assistant GIS**
+  * Pereira Passos Institute (IPP), UN-Habitat
+  * Duties include: Working with SDG indicators, developing Web solutions on ArcGIS Enterprise, and processing microdata.
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
+* **2023: Development Assistant**
+  * Agrotools
+  * Duties include: Socio-environmental assessments of rural properties and applying ESG protocols.
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+* **GIS Platforms:** ArcGIS Pro, ArcGIS Online, QGIS, Google Earth Engine
+* **Programming:** Python, R, Java, JavaScript
+* **Data & Analysis:** Remote Sensing, Spatial Databases, Statistical Analysis
+* **Languages:** Portuguese (Native), English (Fluent), Spanish (Basic)
