@@ -56,7 +56,7 @@ body {
   border: none !important; // Remove a linha divisória que já não faz sentido
 }
 // Garante que o texto do menu na barra superior é branco
-.masthead__menu-item a {
+.masthead__menu-item a: {
   color: #9F468F;
 }
 // Adiciona o efeito de hover que você pediu
