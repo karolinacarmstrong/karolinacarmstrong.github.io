@@ -60,7 +60,7 @@ body {
   color: #9F468F;
 }
 // Adiciona o efeito de hover que você pediu
-.masthead__menu-item a:hover {
+.masthead__menu-item a:{
   background-color: #9F468F; // Um tom de roxo mais claro para contraste
 }
 
@@ -93,7 +93,7 @@ body {
   padding-bottom: 2px;
   transition: all 0.2s ease-in-out;
 }
-.page__content a:hover {
+.page__content a: {
   color: white;
   background-color: #9F468F;
 }
