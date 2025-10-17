@@ -47,53 +47,46 @@
 
 // 1. Fundo geral roxo para toda a página
 body {
-  background-color: #B565A7;
+  background: white !important;
+}
+#main {
+  background: transparent; // REMOVE O POLÍGONO CINZA
+  color: black;            // DEIXA AS LETRAS PRETAS
+  box-shadow: none;        // Remove a sombra
+  padding-top: 2em;        // Adiciona um pouco de espaço do topo
+}
+/* Remove a caixa escura de dentro do "About me" */
+.page__inner-wrap {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  color: inherit;
 }
 
-// 2. Barra superior (cabeçalho) fica transparente para mostrar o roxo do fundo
-.masthead {
-  background: #9F468F !important;
-  border: none !important; // Remove a linha divisória que já não faz sentido
-}
-// Garante que o texto do menu na barra superior é branco
-.masthead__menu-item a: {
-  color: #9F468F;
-}
-// Adiciona o efeito de hover que você pediu
-.masthead__menu-item a:{
-  background-color: #9F468F; // Um tom de roxo mais claro para contraste
-}
-
-// 3. Barra lateral também fica transparente para mostrar o roxo
+/* 2. Barra lateral roxa, com altura total da página e texto branco */
 .sidebar {
   background: #9F468F !important;
   color: white;
-
-  // Garante que os links da barra lateral são brancos
-  a {
-    color: white !important;
-  }
+  height: 100vh; // FAZ A BARRA IR ATÉ O FINAL
+  position: fixed; // Fixa a barra na lateral
+}
+.sidebar a,
+.sidebar .author__name,
+.sidebar .author__bio {
+  color: white !important;
 }
 
-// 4. Área de conteúdo principal (#main) com fundo cinza escuro
-#main {
-  background-color: none;
-  color: white; // Texto principal fica branco
-  padding: 2em;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+/* 3. Barra superior roxa (sem faixa branca) e texto branco */
+.masthead, .greedy-nav {
+  background: #9F468F !important;
 }
-
-// 5. Links dentro da área de conteúdo ficam roxos e estilizados
-.page__content a {
-  color: #9F468F;
-  text-decoration: none;
-  font-weight: bold;
-  border-bottom: 2px solid #9F468F;
-  padding-bottom: 2px;
-  transition: all 0.2s ease-in-out;
-}
-.page__content a: {
+.masthead__menu-item a {
   color: white;
-  background-color: #9F468F;
+  border-radius: 5px;
+}
+
+/* 4. Efeito de hover nos botões (fundo branco, texto roxo) */
+.masthead__menu-item a:hover {
+  background-color: white !important;
+  color: #9F468F !important;
 }
