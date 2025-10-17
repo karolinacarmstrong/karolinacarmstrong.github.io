@@ -5,7 +5,7 @@
 .masthead {
   position: fixed;
   background: #9F468F;
-  border-bottom: 3px solid #dcdcdc;
+  border-bottom: 0.5px solid #dcdcdc;
   height: fit-content;
   top: 0;
   width: 100%;
@@ -56,11 +56,12 @@
   }
 }
 
-.masthead__menu-item {
-  background-color: #9F468F;
-  display: block;
-  list-style-type: none;
-  white-space: nowrap;
+/* Efeito de hover para os itens do menu */
+.masthead__menu-item a:hover {
+  background-color: #D8D8F0; /* Um tom mais escuro que #E6E6FA */
+  border-radius: 5px;       /* Bónus: cantos arredondados */
+  transition: background-color 0.2s ease-in-out; /* Bónus: transição suave */
+}
 
   &--lg {
     padding-right: 2em;
