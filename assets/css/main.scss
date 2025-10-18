@@ -50,7 +50,7 @@
   background: #9F468F !important;
   color: white !important;
   position: fixed;
-  top: 0;
+  top: 20;
   left: 0;
   height: 100vh;
   width: 1000px;
@@ -62,13 +62,13 @@
 .masthead {
   background-color: #9F468F !important;
   color: white !important;
-  margin-left: 350px; /* igual ao rodapé */
-  padding: 1.5em 2em;  /* igual ao rodapé */
+  margin-left: 100px; /* igual ao rodapé */
+  padding: 1em 1.5em;  /* igual ao rodapé */
   right: 0;       /* vai até a borda direita da página */         /* ocupa o resto do espaço */
   border: none !important;
   position: fixed;    /* <- mantém no topo ao rolar */
   top: 0;              /* fica no topo do scroll */
-  z-index: 500;
+  z-index: 1000;
 }
 
 .masthead__inner-wrap,
@@ -99,7 +99,7 @@
   color: white !important;
   margin-left: 100px;
   border-top: none !important;
-  padding: 1.5em 2em;
+  padding: 1em 1.5em;
   text-align: center;
 }
 .page__footer a {
