@@ -1,3 +1,6 @@
+---
+---
+
 /*
  * This file controls what is imported from /_sass
  *
@@ -38,17 +41,9 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-
 /* ==========================================================================
-   Ajustes finais: barra superior, rodapé e sidebar
+   Ajustes finais: barra superior e rodapé roxos, alinhados à sidebar
    ========================================================================== */
-
-/* Reset básico para evitar margens extras */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* Sidebar */
 .sidebar {
@@ -58,7 +53,7 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 340px; /* largura fixa da sidebar */
+  width: 340px;
   padding: 5em 1.5em 2em 1.5em;
   overflow-y: auto;
 }
@@ -74,49 +69,45 @@
   z-index: 1000;
   border: none !important;
 }
-
 .masthead__inner-wrap,
 .greedy-nav {
   background-color: #9F468F !important;
 }
-
 .greedy-nav a,
 .masthead__menu-item a {
   color: white !important;
 }
-
 .greedy-nav a:hover,
 .masthead__menu-item a:hover {
   background: white !important;
   color: #9F468F !important;
 }
 
-/* Conteúdo principal alinhado à sidebar */
+/* Corrige posição do conteúdo principal */
 #main, .page {
   margin-left: 340px; /* igual à largura da sidebar */
-  margin-top: 100px;  /* espaço abaixo da barra superior */
+  margin-top: 100px; /* mantém o espaço para a barra superior */
   padding-right: 2em;
   max-width: 950px;
 }
 
-/* Rodapé roxo colado à sidebar */
+/* Rodapé roxo, colado à sidebar */
 .page__footer {
   background-color: #9F468F !important;
   color: white !important;
-  margin-left: 340px; /* alinhado à sidebar */
+  margin-left: 340px;
   border-top: none !important;
   padding: 1.5em 2em;
   text-align: center;
 }
-
 .page__footer a {
   color: white !important;
   text-decoration: underline;
 }
 
-/* ==========================================================================
-   Fundo geral claro — corrige cinza escuro
-   ========================================================================== */
+/* =============================
+   FUNDO GERAL CLARO — CORRIGE O CINZA ESCURO
+   ============================= */
 html, body, #main, .page__content, .page, .page__inner-wrap {
   background-color: #ffffff !important;
   color: #000000 !important;
