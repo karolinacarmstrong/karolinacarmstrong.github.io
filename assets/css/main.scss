@@ -62,13 +62,13 @@
 .masthead {
   background-color: #9F468F !important;
   color: white !important;
-  margin-left: 100px;
-  position: fixed;
-  top: 0;
-  left: 100px; /* colada à sidebar */
-  width: auto;
-  z-index: 1000;
+  margin-left: 100px; /* igual ao rodapé */
+  padding: 1.5em 2em;  /* igual ao rodapé */
+  width: auto;         /* ocupa o resto do espaço */
   border: none !important;
+  position: sticky;    /* <- mantém no topo ao rolar */
+  top: 0;              /* fica no topo do scroll */
+  z-index: 1000;
 }
 
 .masthead__inner-wrap,
