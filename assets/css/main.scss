@@ -91,6 +91,7 @@
   margin-left: 220px; /* igual à largura da sidebar */
   margin-top: 80px; /* mantém o espaço para a barra superior */
   max-width: calc(100% - 220px); /* ocupa largura total menos a sidebar */
+  padding-left: 1em; /* aproxima do final da sidebar */
   overflow-x: hidden; /* remove scroll horizontal */
   overflow-y: auto;   /* scroll vertical apenas se necessário */
 }
