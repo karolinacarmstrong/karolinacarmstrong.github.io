@@ -65,7 +65,7 @@
   margin-left: 100px;
   position: fixed;
   top: 0;
-  left: 100px; /* colada à sidebar */
+  left: 300px; /* colada à sidebar */
   width: auto;
   z-index: 1000;
   border: none !important;
@@ -87,7 +87,7 @@
 
 /* Corrige posição do conteúdo principal */
 #main, .page {
-  margin-left: 420px; /* igual à largura da sidebar */
+  margin-left: 100px; /* igual à largura da sidebar */
   margin-top: 80px; /* mantém o espaço para a barra superior */
   padding-right: 2em;
   max-width: 950px;
