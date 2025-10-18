@@ -62,13 +62,18 @@
 .masthead {
   background-color: #9F468F !important;
   color: white !important;
-  position: fixed;
+  margin-left: 100px; /* igual ao rodapé */
+  position: relative;
+  padding: 1.5em 2em; /* mesma altura do rodapé */
+  border-bottom: none !important;
+  text-align: left; /* opcional, igual ao rodapé */
   top: 0;
   left: 420px; /* colada à sidebar */
-  width: calc(100% - 420px);
+  width: auto;
   z-index: 1000;
   border: none !important;
 }
+
 .masthead__inner-wrap,
 .greedy-nav {
   background-color: #9F468F !important;
