@@ -95,6 +95,11 @@
   overflow-y: auto;   /* scroll vertical apenas se necessário */
 }
 
+#main * {
+  max-width: 100%; /* força elementos internos a respeitarem largura do container */
+  box-sizing: border-box; /* inclui padding e border na largura */
+}
+
 /* Rodapé roxo, colado à sidebar */
 .page__footer {
   background-color: #9F468F !important;
