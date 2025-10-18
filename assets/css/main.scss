@@ -69,6 +69,7 @@
   position: fixed;    /* <- mantém no topo ao rolar */
   top: 0;              /* fica no topo do scroll */
   z-index: 1000;
+  text-align: center;
 }
 
 .masthead__inner-wrap,
