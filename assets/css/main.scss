@@ -104,3 +104,19 @@
   color: white !important;
   text-decoration: underline;
 }
+
+/* =============================
+   FUNDO GERAL CLARO — CORRIGE O CINZA ESCURO
+   ============================= */
+html, body, #main, .page__content, .page, .page__inner-wrap {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Remove qualquer sobreposição de fundo cinza */
+.wrapper, .initial-content, .content, .article, .site-content {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
