@@ -42,7 +42,7 @@
     "vendor/font-awesome/brands"
 ;
 /* ==========================================================================
-   Versão final — visual limpo, roxo consistente, texto preto
+   Ajustes finais: barra superior e rodapé roxos, alinhados à sidebar
    ========================================================================== */
 
 /* Sidebar */
@@ -56,71 +56,42 @@
   width: 340px;
   padding: 5em 1.5em 2em 1.5em;
   overflow-y: auto;
-  z-index: 1000;
-}
-.sidebar a,
-.sidebar .author__name,
-.sidebar .author__bio {
-  color: white !important;
 }
 
-/* Barra superior */
-.masthead,
+/* Barra superior (masthead + menu) */
+.masthead {
+  background-color: #9F468F !important;
+  color: white !important;
+  position: fixed;
+  top: 0;
+  left: 340px; /* colada à sidebar */
+  width: calc(100% - 340px);
+  z-index: 1000;
+  border: none !important;
+}
 .masthead__inner-wrap,
 .greedy-nav {
   background-color: #9F468F !important;
-  color: white !important;
-  border: none !important;
-  box-shadow: none !important;
 }
-
-.masthead {
-  position: fixed;
-  top: 0;
-  left: 340px;
-  width: calc(100% - 340px);
-  z-index: 1001;
-}
-
-/* Botões do menu - sempre brancos, com hover roxo mais escuro */
 .greedy-nav a,
 .masthead__menu-item a {
   color: white !important;
-  background: transparent !important;
-  border-radius: 5px;
-  padding: 0.4em 0.8em;
-  transition: all 0.2s ease-in-out;
 }
-
 .greedy-nav a:hover,
 .masthead__menu-item a:hover {
-  background: #7c3870 !important; /* roxo escuro no hover */
-  color: white !important; /* mantém texto branco */
+  background: white !important;
+  color: #9F468F !important;
 }
 
-/* Conteúdo principal - texto preto, sem fundo escuro */
-#main,
-.page {
-  background: transparent !important;
-  color: black !important;
+/* Corrige posição do conteúdo principal */
+#main, .page {
   margin-left: 360px;
-  margin-top: 100px;
+  margin-top: 100px; /* empurra conteúdo pra baixo da barra superior */
   padding-right: 2em;
   max-width: 950px;
-  box-shadow: none !important;
 }
 
-/* Remove qualquer card escuro (como o “About me”) */
-.page__content,
-.page__inner-wrap,
-.article,
-.archive__item {
-  background: transparent !important;
-  box-shadow: none !important;
-  color: black !important;
-}
-
-/* Rodapé */
+/* Rodapé roxo, colado à sidebar */
 .page__footer {
   background-color: #9F468F !important;
   color: white !important;
@@ -133,4 +104,3 @@
   color: white !important;
   text-decoration: underline;
 }
-
