@@ -64,8 +64,8 @@
   color: white !important;
   position: fixed;
   top: 0;
-  left: 340px; /* colada à sidebar */
-  width: calc(100% - 340px);
+  left: 420px; /* colada à sidebar */
+  width: calc(100% - 420px);
   z-index: 1000;
   border: none !important;
 }
@@ -86,7 +86,7 @@
 /* Corrige posição do conteúdo principal */
 #main, .page {
   margin-left: 420px; /* igual à largura da sidebar */
-  margin-top: 100px; /* mantém o espaço para a barra superior */
+  margin-top: 80px; /* mantém o espaço para a barra superior */
   padding-right: 2em;
   max-width: 950px;
 }
@@ -98,7 +98,7 @@
   margin-left: 100px;
   border-top: none !important;
   padding: 1.5em 2em;
-  text-align: center;
+  text-align: left;
 }
 .page__footer a {
   color: white !important;
