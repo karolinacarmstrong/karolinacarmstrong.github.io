@@ -64,7 +64,7 @@
   color: white !important;
   margin-left: 200px; /* igual ao rodapé */
   padding: 1.5em 2em;  /* igual ao rodapé */
-  width: auto;         /* ocupa o resto do espaço */
+  right: 0;       /* vai até a borda direita da página */         /* ocupa o resto do espaço */
   border: none !important;
   position: fixed;    /* <- mantém no topo ao rolar */
   top: 0;              /* fica no topo do scroll */
@@ -89,8 +89,8 @@
 #main, .page {
   margin-left: 100px; /* igual à largura da sidebar */
   margin-top: 80px; /* mantém o espaço para a barra superior */
-  padding-right: 2em;
-  max-width: auto;
+  max-width: calc(100% - 100px); /* ocupa largura total menos a sidebar */
+  overflow-x: hidden;   /* evita rolagem horizontal desnecessária */
 }
 
 /* Rodapé roxo, colado à sidebar */
