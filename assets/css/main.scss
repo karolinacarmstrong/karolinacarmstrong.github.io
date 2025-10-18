@@ -53,7 +53,7 @@
   top: 20;
   left: 0;
   height: 100vh;
-  width: 1000px;
+  width: 220px;
   padding: 5em 1.5em 2em 1.5em;
   overflow-y: auto;
 }
@@ -88,10 +88,11 @@
 
 /* Corrige posição do conteúdo principal */
 #main, .page {
-  margin-left: 50px; /* igual à largura da sidebar */
+  margin-left: 220px; /* igual à largura da sidebar */
   margin-top: 80px; /* mantém o espaço para a barra superior */
-  max-width: calc(100% - 100px); /* ocupa largura total menos a sidebar */
-  overflow-x: hidden;   /* evita rolagem horizontal desnecessária */
+  max-width: calc(100% - 220px); /* ocupa largura total menos a sidebar */
+  overflow-x: hidden; /* remove scroll horizontal */
+  overflow-y: auto;   /* scroll vertical apenas se necessário */
 }
 
 /* Rodapé roxo, colado à sidebar */
@@ -100,7 +101,7 @@
   color: white !important;
   margin-left: 100px;
   border-top: none !important;
-  padding: 1em 1.5em;
+  padding: 1.5em 2em;
   text-align: center;
 }
 .page__footer a {
@@ -116,6 +117,7 @@ html, body, #main, .page__content, .page, .page__inner-wrap {
   color: #000000 !important;
   box-shadow: none !important;
   border: none !important;
+  overflow-x: hidden;
 }
 
 /* Remove qualquer sobreposição de fundo cinza */
