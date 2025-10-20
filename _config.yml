@@ -23,8 +23,8 @@ author:
 
   # Links Acadêmicos e Profissionais (Preencha com seus links completos)
   googlescholar     : # Coloque o LINK COMPLETO do seu perfil no Google Scholar aqui
-  orcid             : # Coloque o LINK COMPLETO do seu ORCID aqui
-  researchgate      : # Coloque o LINK COMPLETO do seu ResearchGate aqui
+  orcid             : https://orcid.org/0009-0007-9099-2291
+  researchgate      : https://www.researchgate.net/profile/Karolina-Chacon-Armstrong/
   
   # Repositórios e Redes Sociais
   github            : "karolinacarmstrong"
