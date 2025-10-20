@@ -131,3 +131,18 @@ html, body, #main, .page__content, .page, .page__inner-wrap {
   background: #ffffff !important;
   color: #000000 !important;
 }
+
+/* 6. Estilização CORRIGIDA dos links das publicações */
+.archive__item-title a {
+  color: #9F468F !important;
+}
+/* CORRIGE O BOTÃO "DOWNLOAD PAPER" */
+.archive__item .btn, .archive__item .btn--inverse {
+  background: #9F468F !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.archive__item .btn:hover, .archive__item .btn--inverse:hover {
+  background: #7c3870 !important;
+}
