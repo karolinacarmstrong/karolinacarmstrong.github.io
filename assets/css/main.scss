@@ -147,32 +147,52 @@ html, body, #main, .page__content, .page, .page__inner-wrap {
   background: #7c3870 !important;
 }
 
-/* ==========================================================================
-   MEDIA QUERY PARA VERSÃO MOBILE (ECRÃS PEQUENOS)
-   ========================================================================== */
+/* --- MEDIA QUERY PARA VERSÃO MOBILE (ECRÃS PEQUENOS ATÉ 768PX) --- */
 
 @media screen and (max-width: 768px) {
 
-  /* Desfaz a fixação da sidebar e torna-a num bloco normal no topo */
+  /* 1. Esconde o botão "Follow" e força a lista de links a aparecer */
+  .author__urls-wrapper .btn {
+    display: none !important;
+  }
+  ul.author__urls {
+    display: block !important;
+    position: static !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-top: 15px;
+  }
+  ul.author__urls li {
+    display: inline-block; /* Coloca os links lado a lado */
+    margin: 0 10px;
+  }
+
+  /* 2. Transforma a sidebar numa barra de perfil no topo */
   .sidebar {
     position: relative !important;
     height: auto !important;
     width: 100% !important;
-    padding-top: 1em !important;
-    padding-bottom: 1em !important;
+    padding: 1em !important;
+    text-align: center; // Centra o conteúdo
   }
 
-  /* Faz a barra superior ocupar a largura toda */
+  /* 3. Faz a barra de menu superior ocupar a largura toda */
   .masthead {
     width: 100% !important;
     margin-left: 0 !important;
+    position: relative !important; // Deixa de ser fixa
+  }
+  .masthead__menu-item--lg {
+    display: list-item; // Mostra o ícone de casa novamente
   }
 
-  /* Faz o conteúdo principal ocupar a largura toda, por baixo dos outros elementos */
+  /* 4. Faz o conteúdo principal e o rodapé ocuparem a largura toda */
   #main, .page, .page__footer {
     margin-left: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
     padding: 1em;
+    margin-top: 1em;
   }
 }
