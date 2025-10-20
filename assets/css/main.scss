@@ -146,3 +146,33 @@ html, body, #main, .page__content, .page, .page__inner-wrap {
 .archive__item .btn:hover, .archive__item .btn--inverse:hover {
   background: #7c3870 !important;
 }
+
+/* ==========================================================================
+   MEDIA QUERY PARA VERSÃO MOBILE (ECRÃS PEQUENOS)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+
+  /* Desfaz a fixação da sidebar e torna-a num bloco normal no topo */
+  .sidebar {
+    position: relative !important;
+    height: auto !important;
+    width: 100% !important;
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+  }
+
+  /* Faz a barra superior ocupar a largura toda */
+  .masthead {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  /* Faz o conteúdo principal ocupar a largura toda, por baixo dos outros elementos */
+  #main, .page, .page__footer {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1em;
+  }
+}
